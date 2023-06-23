@@ -55,4 +55,24 @@ if st.button('Submit'):
         sentiment = get_responce_from_chatgpt(text)
         st.success("SUCCESSFULLY GENERATED : ")
         st.header(f"{sentiment}")
-#     st.header(f"{sentiment}")
+
+st.markdown(
+        """
+        <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            color: #6c757d;
+            text-align: center;
+            padding: 10px;
+        }
+        </style>
+        <div class="footer">
+            CREATED BY MAQSOOD HUSSAIN WANI
+        </div>
+        """,True
+    
+    )
