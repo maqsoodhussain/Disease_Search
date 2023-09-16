@@ -12,6 +12,11 @@ st.set_page_config(
 openai.api_key=""
 
 
+fpath = Path('https://drive.google.com/file/d/17_v_NpAaHrBYiN39xuNr3UQzcU-nBRYt/view?usp=drive_link')
+cfg_reader = configparser.ConfigParser()
+cfg_reader.read(str(fpath))
+openai.api_key = cfg_reader.get('API_KEY','OPENAI_API_KEY')
+
 
 
 def get_responce_from_chatgpt(text):
